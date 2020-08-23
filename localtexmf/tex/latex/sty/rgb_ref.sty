@@ -1,0 +1,57 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ref.sty
+%
+% A collection of referencing commands based on fancyref. These can be
+%  overridden to accommodate the standards of a particular journal.
+%
+ \NeedsTeXFormat{LaTeX2e}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Referencing
+%
+\RequirePackage[plain]{fancyref}
+\renewcommand{\fancyrefdefaultformat}{plain}
+
+\fancyrefchangeprefix{\fancyrefchaplabelprefix}{chp}
+\fancyrefchangeprefix{\fancyrefseclabelprefix}{sct}
+\fancyrefchangeprefix{\fancyrefeqlabelprefix}{eqn}
+\fancyrefchangeprefix{\fancyreffiglabelprefix}{fig}
+\fancyrefchangeprefix{\fancyreftablabelprefix}{tab}
+\fancyrefchangeprefix{\fancyrefenumlabelprefix}{enm}
+\fancyrefchangeprefix{\fancyreffnlabelprefix}{fnt}
+
+\renewcommand*{\frefchapname}{\Frefchapname}
+\renewcommand*{\frefsecname}{\Frefsecname}
+\renewcommand*{\frefeqname}{Eq.}
+\renewcommand*{\freffigname}{Fig.}
+\renewcommand*{\Freffigname}{Figure}
+\renewcommand*{\freftabname}{\Freftabname}
+
+\newcommand*{\fancyrefapplabelprefix}{app}
+\newcommand*{\Frefappname}{Appendix}
+\newcommand*{\frefappname}{\Frefappname}
+\frefformat{\fancyrefdefaultformat}{\fancyrefapplabelprefix}{\frefappname\fancyrefdefaultspacing#1}
+\Frefformat{\fancyrefdefaultformat}{\fancyrefapplabelprefix}{\Frefappname\fancyrefdefaultspacing#1}
+
+\newcommand*{\fancyreflstlabelprefix}{lst}
+\newcommand*{\Freflstname}{Listing}
+\newcommand*{\freflstname}{\Freflstname}
+\frefformat{\fancyrefdefaultformat}{\fancyreflstlabelprefix}{\freflstname\fancyrefdefaultspacing#1}
+\Frefformat{\fancyrefdefaultformat}{\fancyreflstlabelprefix}{\Freflstname\fancyrefdefaultspacing#1}
+
+\newcommand*{\chp}[1]{\fref{chp:#1}}
+\newcommand*{\Chp}[1]{\Fref{chp:#1}}
+\newcommand*{\sct}[1]{\fref{sct:#1}}
+\newcommand*{\Sct}[1]{\Fref{sct:#1}}
+\newcommand*{\app}[1]{\fref{app:#1}}
+\newcommand*{\App}[1]{\Fref{app:#1}}
+\newcommand*{\eqn}[1]{\fref{eqn:#1}}
+\newcommand*{\Eqn}[1]{\Fref{eqn:#1}}
+\newcommand*{\fig}[1]{\fref{fig:#1}}
+\newcommand*{\Fig}[1]{\Fref{fig:#1}}
+\newcommand*{\tab}[1]{\fref{tab:#1}}
+\newcommand*{\Tab}[1]{\Fref{tab:#1}}
+\newcommand*{\lst}[1]{\fref{lst:#1}}
+\newcommand*{\Lst}[1]{\Fref{lst:#1}}

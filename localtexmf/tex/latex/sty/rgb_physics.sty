@@ -1,0 +1,73 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% physics.sty
+%
+% A collection of standard physics commands.
+%
+ \NeedsTeXFormat{LaTeX2e}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Derivatives
+%
+ \newcommand{\ppt}{\ensuremath{\frac{\partial}{\partial t}}}
+ \newcommand{\ddt}{\ensuremath{\frac{d}{d t}}}
+ \newcommand{\pptt}{\ensuremath{\frac{\partial^2}{\partial t^2}}}
+ \newcommand{\ddtt}{\ensuremath{\frac{d^2}{dt^2}}}
+ \newcommand{\ppz}{\ensuremath{\frac{\partial}{\partial z}}}
+ \newcommand{\ddz}{\ensuremath{\frac{d}{dz}}}
+ \newcommand{\ppzz}{\ensuremath{\frac{\partial^2}{\partial z^2}}}
+ \newcommand{\ddzz}{\ensuremath{\frac{d^2}{dz^2}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Propagating Electromagnetic Waves
+%
+ \newcommand{\rt}{\ensuremath{(\mathbf{r}, t)}}
+ \newcommand{\zt}{\ensuremath{(z, t)}}
+ \newcommand{\rw}{\ensuremath{(\mathbf{r}, \omega)}}
+ \newcommand{\khat}{\ensuremath{\hat{\mathbf{k}}}}
+ \newcommand{\xhat}{\ensuremath{\hat{\mathbf{x}}}}
+ \newcommand{\yhat}{\ensuremath{\hat{\mathbf{y}}}}
+ \newcommand{\zhat}{\ensuremath{\hat{\mathbf{z}}}}
+ \newcommand{\Ert}{\ensuremath{\mathbf{E}\rt}}
+ \newcommand{\Drt}{\ensuremath{\mathbf{D}\rt}}
+ \newcommand{\Hrt}{\ensuremath{\mathbf{H}\rt}}
+ \newcommand{\Brt}{\ensuremath{\mathbf{B}\rt}}
+ \newcommand{\Ezt}{\ensuremath{E(z, t)}}
+ \newcommand{\Bzt}{\ensuremath{B(z, t)}}
+ \newcommand{\Eo}{\ensuremath{\mathbf{E}_0}}
+ \newcommand{\Bo}{\ensuremath{\mathbf{B}_0}}
+ \newcommand{\emwt}{\ensuremath{e^{-i \omega t}}}
+ \newcommand{\epwt}{\ensuremath{e^{+i \omega t}}}
+ \newcommand{\emkz}{\ensuremath{e^{-i k z}}}
+ \newcommand{\epkz}{\ensuremath{e^{i k z}}}
+ \newcommand{\epkr}{\ensuremath{e^{+i \mathbf{k} \bm{\cdot} \mathbf{r}}}}
+ \newcommand{\emkr}{\ensuremath{e^{-i \mathbf{k} \bm{\cdot} \mathbf{r}}}}
+ \newcommand{\epkrwt}{\ensuremath{e^{+i (\mathbf{k} \bm{\cdot} \mathbf{r} - \omega\, t)}}}
+ \newcommand{\emkrwt}{\ensuremath{e^{-i (\mathbf{k} \bm{\cdot} \mathbf{r} - \omega\, t)}}}
+ \newcommand{\epkzwt}{\ensuremath{e^{i (k z - \omega t)}}}
+ \newcommand{\emkzwt}{\ensuremath{e^{-i (k z - \omega t)}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Nonlinear Optics
+%
+ \newcommand{\dff}{\ensuremath{d_\mathit{eff}}}
+ \newcommand{\sn}{\operatorname{sn}}
+ \newcommand{\drive}{\eta_0}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Quantum Optics
+%
+ \newcommand{\cc}{\text{c.c.}}
+ \newcommand{\hc}{\text{h.c.}}
+ \newcommand{\bra}[1]{\ensuremath{\langle #1 |}}
+ \newcommand{\ket}[1]{\ensuremath{| #1 \rangle}}
+ \newcommand{\proj}[1]{\ensuremath{\left| {#1} \right\rangle \left\langle {#1}\right |}}
+ \newcommand{\projj}[2]{\ensuremath{\left| {#1} \right\rangle \left\langle {#2}\right |}}
+ \newcommand{\iprod}[2]{\ensuremath{\left\langle {#1}|{#2}\right\rangle}}
+ \newcommand{\avg}[1]{\ensuremath{\left \langle #1 \right \rangle}}
+ \newcommand{\ho}[1]{\ensuremath{\hslash\mspace{1.5mu} \omega_{#1}}}
+ \newcommand{\rhx}[2]{\ensuremath{\rho_{\{#1\}\{#2\}}}}

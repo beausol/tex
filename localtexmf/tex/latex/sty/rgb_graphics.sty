@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% graphics.sty
+%
+% A collection of graphics macros, for use with DVI EPS and PDF files.
+%
+ \NeedsTeXFormat{LaTeX2e}
+ \RequirePackage{subcaption}
+ \RequirePackage{ifpdf}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% SWITCH for LaTeX or pdfLaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifpdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% pdfLaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \RequirePackage[pdftex]{graphicx}           %%% graphics for pdfLaTeX
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg}  %%% standard extension for included graphics
+    \RequirePackage[pdftex]{color}
+    \RequirePackage[pdftex,                     %%% hyper-references for pdflatex
+        bookmarks=true,%                        %%% generate bookmarks ...
+        bookmarksnumbered=true,%                %%% ... with numbers
+        bookmarksopen=true,%                    %%% open bookmarks in Acrobat ...
+        bookmarksopenlevel=0,%                  %%% ... one level below the top
+        linktocpage=true,%                      %%% make page number (not text) be link on TOC, LOF, and LOT
+        hyperfigures=true,%                     %%% make figures hyperlinks
+        hypertexnames=false,%                   %%% needed for correct links to figures !!!
+        colorlinks=true,%                       %%% use colored links instead of boxes
+        linkcolor=cyan,%                        %%% define colors for eqn/fig/sct links, ...
+        urlcolor=blue,%                         %%% ... URLs, ...
+        citecolor=red,%                         %%% ... citations/ref links, and ...
+        anchorcolor=green,%                     %%% ... page anchors
+        pdfstartview=FitH]{hyperref}            %%% start with "fit width" view in Acrobat
+    \pdfadjustspacing=1                         %%% force LaTeX-like character spacing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\else
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX or pdfTeX running in DVI mode
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \RequirePackage[dvips]{graphicx}            %%% graphics for dvips
+    \DeclareGraphicsExtensions{.eps}            %%% standard extension for included graphics
+    \RequirePackage[dvips]{color}
+    \RequirePackage[dvips,                      %%% hyper-references for ps2pdf
+        bookmarksnumbered=true,%                %%% ... with numbers
+        bookmarksopen=true,%                    %%% open bookmarks in Acrobat ...
+        bookmarksopenlevel=0,%                  %%% ... one level below the top
+        linktocpage=true,%                      %%% make page number (not text) be link on TOC, LOF, and LOT
+        hyperfigures=true,%                     %%% make figures hyperlinks
+        hypertexnames=false,%                   %%% needed for correct links to figures !!!
+        colorlinks=true,%                       %%% use colored links instead of boxes
+        linkcolor=cyan,%                        %%% define colors for eqn/fig/sct links, ...
+        urlcolor=blue,%                         %%% ... URLs, ...
+        citecolor=red,%                         %%% ... citations/ref links, and ...
+        anchorcolor=green,%                     %%% ... page anchors
+        pdfstartview=FitH]{hyperref}            %%% start with "fit width" view in Acrobat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fi
+
+\RequirePackage[all]{hypcap}%                   %%% Work around hyperref figure caption bug
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define a few handy color text macros.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+ \newcommand{\red}[1]
+ {%
+ {\color{red} #1}%
+ }
+ \newcommand{\green}[1]
+ {%
+ {\color{green} #1}%
+ }
+ \newcommand{\blue}[1]
+ {%
+ {\color{blue} #1}%
+ }
